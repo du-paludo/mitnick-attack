@@ -1,0 +1,19 @@
+20:12:11.783167 IP 10.9.0.6.1023 > 10.9.0.5.shell: Flags [S], seq 3264121826, win 64240, options [mss 1460,sackOK,TS val 3050974460 ecr 0,nop,wscale 7], length 0
+20:12:11.783229 IP 10.9.0.5.shell > 10.9.0.6.1023: Flags [S.], seq 2178192041, ack 3264121827, win 65160, options [mss 1460,sackOK,TS val 59684851 ecr 3050974460,nop,wscale 7], length 0
+20:12:11.783251 IP 10.9.0.6.1023 > 10.9.0.5.shell: Flags [.], ack 1, win 502, options [nop,nop,TS val 3050974460 ecr 59684851], length 0
+20:12:11.783289 IP 10.9.0.6.1023 > 10.9.0.5.shell: Flags [P.], seq 1:21, ack 1, win 502, options [nop,nop,TS val 3050974460 ecr 59684851], length 20
+20:12:11.783299 IP 10.9.0.5.shell > 10.9.0.6.1023: Flags [.], ack 21, win 509, options [nop,nop,TS val 59684851 ecr 3050974460], length 0
+20:12:11.785471 IP 10.9.0.5.1023 > 10.9.0.6.1022: Flags [S], seq 3350900555, win 64240, options [mss 1460,sackOK,TS val 59684853 ecr 0,nop,wscale 7], length 0
+20:12:11.785489 IP 10.9.0.6.1022 > 10.9.0.5.1023: Flags [S.], seq 2788919304, ack 3350900556, win 65160, options [mss 1460,sackOK,TS val 3050974462 ecr 59684853,nop,wscale 7], length 0
+20:12:11.785500 IP 10.9.0.5.1023 > 10.9.0.6.1022: Flags [.], ack 1, win 502, options [nop,nop,TS val 59684853 ecr 3050974462], length 0
+20:12:11.786182 IP 10.9.0.5.shell > 10.9.0.6.1023: Flags [P.], seq 1:2, ack 21, win 509, options [nop,nop,TS val 59684854 ecr 3050974460], length 1
+20:12:11.786190 IP 10.9.0.6.1023 > 10.9.0.5.shell: Flags [.], ack 2, win 502, options [nop,nop,TS val 3050974463 ecr 59684854], length 0
+20:12:11.788612 IP 10.9.0.5.shell > 10.9.0.6.1023: Flags [P.], seq 2:31, ack 21, win 509, options [nop,nop,TS val 59684856 ecr 3050974463], length 29
+20:12:11.788627 IP 10.9.0.6.1023 > 10.9.0.5.shell: Flags [.], ack 31, win 502, options [nop,nop,TS val 3050974465 ecr 59684856], length 0
+20:12:11.788646 IP 10.9.0.5.1023 > 10.9.0.6.1022: Flags [F.], seq 1, ack 1, win 502, options [nop,nop,TS val 59684856 ecr 3050974462], length 0
+20:12:11.788721 IP 10.9.0.5.shell > 10.9.0.6.1023: Flags [F.], seq 31, ack 21, win 509, options [nop,nop,TS val 59684857 ecr 3050974465], length 0
+20:12:11.788754 IP 10.9.0.6.1023 > 10.9.0.5.shell: Flags [F.], seq 21, ack 32, win 502, options [nop,nop,TS val 3050974466 ecr 59684857], length 0
+20:12:11.788778 IP 10.9.0.5.shell > 10.9.0.6.1023: Flags [.], ack 22, win 509, options [nop,nop,TS val 59684857 ecr 3050974466], length 0
+20:12:11.788802 IP 10.9.0.6.1022 > 10.9.0.5.1023: Flags [F.], seq 1, ack 2, win 510, options [nop,nop,TS val 3050974466 ecr 59684856], length 0
+20:12:11.788812 IP 10.9.0.5.1023 > 10.9.0.6.1022: Flags [.], ack 2, win 502, options [nop,nop,TS val 59684857 ecr 3050974466], length 0
+
