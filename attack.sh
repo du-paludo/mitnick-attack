@@ -28,10 +28,10 @@ cleanup() {
 trap cleanup EXIT
 
 # Wait for arpspoof to work
-sleep 5
+sleep 4
 
 # Run the Python script and wait for it to finish
-python3 script.py $interface
+python3 sniff-spoof.py $interface
 
 # Explicitly call cleanup in case the trap doesn't catch
 cleanup

